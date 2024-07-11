@@ -1,0 +1,75 @@
+{% extends 'Frontend/main.html' %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% block content %}
+        <div class="row">
+            <div class="col-lg-4" style="background-color:pink";>
+
+                <img class="thumbnail" src="{% static 'images/lady.png' %}">
+                <a class="li-remover" href="{% url 'women' %}"><div class="box-element product">
+                    
+                    <strong><p>Women</p></strong>
+                    
+                </div></a>
+            
+            </div>
+
+            <div class="col-lg-4" style="background-color:grey;">
+
+                <img class="thumbnail" src="{% static 'images/man.jpg' %}">
+                <a href="{% url 'men' %}"><div class="box-element product">
+                    <strong><p>Men</p></strong>
+                </div></a>
+
+            </div>
+
+            <div class="col-lg-4" style="background-color:pink;">
+
+                <img class="thumbnail" src="{% static 'images/kid.png' %}">
+                <a href="{% url 'kids' %}"><div class="box-element product">
+                    <strong><p>Kids</p></strong>
+                </div></a>
+                
+            </div>
+
+            <div class="col-lg-4" style="background-color:yellowgreen;">
+                
+                <img class="thumbnail" src="{% static 'images/jew.jpg' %}">
+                <a href="{% url 'jewellery' %}"><div class="box-element product">
+                    <strong><p>Jewellery</p></strong>
+                </div></a>
+
+            </div>
+
+            <div class="col-lg-4" style="background-color:whitesmoke;">
+                
+                <img class="thumbnail" src="{% static 'images/shoe.jpg' %}">
+                <a href="{% url 'shoes' %}"><div class="box-element product">
+                    <strong><p>Shoes</p></strong>
+                </div></a>
+
+            </div>
+            
+            <div class="col-lg-4" style="background-color:yellowgreen;">
+                
+                <img class="thumbnail" src="{% static 'images/underwear.png' %}">
+                <a href="{% url 'underwear' %}"><div class="box-element product">
+                    <strong><p>underwear</p></strong>
+                </div></a>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

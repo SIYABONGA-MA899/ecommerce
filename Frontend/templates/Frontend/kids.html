@@ -1,0 +1,32 @@
+{% extends 'Frontend/main.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>kids page</h1>
+
+    {% block content %}
+    <div class="row">
+        {% for obj in objs %}
+        <div class="col-lg-4">
+            <a href="{% url 'cart' %}"><img class="thumbs" src="{{obj.imageURL}}"></a>
+            <div class="box-element product">
+                <h6>{{ obj.name }}</h6>
+                <hr>
+                <button data-product={{obj.id}} data-action="add" type="button" class="btn btn-success update-cart">Add to cart</button>
+                <strong><p class="price" style="text-align: right">R{{ obj.price }}</p></strong>
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    {% endblock %}
+</body>
+</html>
